@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Vašo a Mič</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:900">
+	<link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+	<header>
+		<nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="index.html">Vote</a></li>
+                <li><a href="game.html">Game</a></li>
+            </ul>
+            </div>
+        </nav>
+	</header>
+	<main>
+		<article class="content container">
+
+			<h2 class="shadow">kto je väčšia</h2>
+			<h1 class="shadow">sex mašina?</h1>
+
+			<form action="" method="post" class="contact-form group">
+				<div id="wrapper">
+					<div class="pull-left dude mitch" onclick="increaseValue(this.querySelector('p').id)">
+						<img class="foto" src="./images/mitch.jpg" alt="mitch">
+						<p id="mitch" class="score">0</p>
+					</div>
+	
+					<div class="pull-right dude vasho" onclick="increaseValue(this.querySelector('p').id)">
+						<img class="foto" src="./images/vasho.jpg" alt="vasho">
+						<p id="vasho" class="score">0</p>
+					</div>
+	
+					<div class="pull-right dude yablko" onclick="increaseValue(this.querySelector('p').id)">
+						<img class="foto" src="./images/yablko.png" alt="yablko">
+						<p id="yablko" class="score">0</p>
+					</div>
+				</div>
+			</form>
+
+		</article>
+	</main>
+
+	<script>
+		
+		function increaseValue(id){
+			let score = Number(document.getElementById(id).innerHTML);
+			document.getElementById(id).innerHTML = ++score
+		}
+	</script>
+</body>
+</html>

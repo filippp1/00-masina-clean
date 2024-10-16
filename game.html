@@ -50,32 +50,32 @@
 		}
 
 		function createImage(speed) {
-            const img = document.createElement('img');
-            img.src = './images/vasho.jpg';
-            img.className = 'game-img';
+            const img = document.createElement('img')
+            img.src = './images/vasho.jpg'
+            img.className = 'game-img'
 
-            img.style.left = Math.random() * (window.innerWidth - 100) + 'px'; 
+            img.style.left = Math.random() * (window.innerWidth - 100) + 'px'
 
-            document.body.appendChild(img); 
+            document.body.appendChild(img)
 
-            img.style.animation = `fall ${speed}s linear`;
+            img.style.animation = `fall ${speed}s linear`
 
             img.addEventListener('animationend', () => {
                 img.remove();
                 document.getElementById("difficultyWrapper").style.display=""
                 alert("Game Over Your Score: "+ttlScore)
                 document.getElementById("score").innerText = `Score : 0`
-                ttlScore = 0;
-            });
+                ttlScore = 0
+            })
 
             img.onclick = function() {
-                incrementScore();
-                img.remove();
-            };
+                incrementScore()
+                img.remove()
+            }
 
 			img.onmousedown = function() {
-                return false;
-            };
+                return false
+            }
         }
 	</script>
 </html>
